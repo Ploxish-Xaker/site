@@ -1,0 +1,107 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Django Blog</title>
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.."/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.."></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+
+<body>
+
+ <!-- делаем шапку сайта -->
+	<header class="header">
+	
+		<div class="logo">
+			<a  class="django-blog" href="/">Django Blog</a>
+		</div>
+
+
+		<!-- сайд бар -->
+		<div class="side-bar">
+
+			<ul>
+				<li class="nav-bar"><a  class="nav-bar-word" href="/news/">News</a></li>
+				<li class="nav-bar"><a  class="nav-bar-word" href="/admin">Admin</a></li>
+				<li class="nav-bar"><a  class="nav-bar-word" href="/portfolio">Portfolio</a></li>
+				<li class="nav-bar"><a  class="nav-bar-word" href="/drafts">Drafts</a></li>
+				<li class="nav-bar"><a  class="nav-bar-word" href="#">Contact</a></li>
+
+				<li class="button-nav-bar"><a class="button-nav-bar-word" href="/accounts/login/">Авторизоваться</a></li>
+			</ul>
+
+		</div>
+
+	</header>
+
+	<!-- делаем контент сайта -->
+	<div class="content">
+		<!-- первая часть - "home" -->
+		<div class="home">
+			{% block portfolio %}
+			{% endblock %}
+			{% block content %}
+			{% endblock %}
+		</div>
+
+		<!-- вторая часть - "services" -->
+		<div class="services">
+			
+			<div class="our-services">
+				<div>
+					<p class="services-me">Сервисы</p>
+				</div>
+				<hr width="250px" color="#ffffff" size="5px">
+			</div>
+			
+		</div>
+
+		<!-- делаем разделение между 2 и 3 частями -->
+		<div class="separation">
+
+		</div>
+		
+		<!-- 3 часть -->
+		<div class="our_works">
+			
+			<div class="our_works_title">
+				<div class="text_our_works">
+					<p>Мои работы</p>
+					<hr width="205px" color="#363636" size="5px">
+				</div>
+
+				<div class="subtitle">
+					<span class="all">Все</span>
+					<span class="website">Сайты</span>
+					<span class="template">Шаблоны</span>				
+				</div>
+			</div>
+
+			<div class="blocks">
+
+				<div class="preview"></div>
+				<div class="preview"></div>
+				<div class="preview"></div>
+
+				<div class="preview"></div>
+				<div class="preview"></div>
+				<div class="preview"></div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

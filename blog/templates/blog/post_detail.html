@@ -1,0 +1,36 @@
+{% extends 'blog/post-home.html' %}
+
+{% block content %}
+
+    <div class="post">
+        
+        <h1 class="post-name-2">{{ post.title }}</h1>
+        <p class="text_in_post">{{ post.text|linebreaksbr }}</p>
+        <a class="butt change-post" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span>Изменить</a>
+        <a class="butt remove-post" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span>Удалить</a>
+        {% if post.published_date %}
+            <div class="date">
+        {{ post.published_date }}
+            </div>
+        {% else %}
+            <a class="post-published" href="{% url 'post_publish' pk=post.pk %}">Опубликовать</a>
+        {% endif %}
+        <br><br><br>
+        <a class="comment_add" href="{% url 'add_comment_to_post' pk=post.pk %}">Добавить комментарий</a>
+
+
+        <div class="comment">
+            {% for comment in post.comments.all %}
+                <div class="date_comment">
+                    {{ comment.created_date }}
+                        <a class="comment_remove" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span>Удалить</a>
+                </div>
+                <strong class="comment-author">{{ comment.author }}</strong>
+                <p>{{ comment.text|linebreaks }}</p>
+            {% empty %}
+            <p class="no_comment">Комментарии не найдены! Стань первым!</p>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

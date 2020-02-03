@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Новости!</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+</head>
+<body>
+	<div class="container">
+	<aside class="sidebar-left">
+	   	<form action="/news/contact/">
+	    	<button class="contact-of-post">Контакты</button>
+	    </form>
+	</aside>
+	<main class="content">
+	<header class="header">
+		<div class='page-header'>
+	  		<a href="/" class='page-header-2'>Django Blog</a>
+	  	</div>
+	  	<div class="home-page-news">
+			 <a href="/news/" class="home-page-news-2">Начальная страница Новостей</a>
+		</div>
+	</header>
+	    <div class="wrapper">
+	      	{% block homepage %}
+			{% endblock %}
+	      	{% block content %}
+			{% endblock %}
+			{% block news %}
+			{% endblock %}
+	    </div>
+	</main>
+	<aside class="sidebar-right">
+		<form action="/news/post/">
+	    	<button  class="news-of-post">Новости</button>
+	    </form>
+	</aside>
+	</div>
+</body>
+</html>

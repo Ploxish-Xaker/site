@@ -1,0 +1,93 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Django Blog</title>
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+		<link rel="icon" type="image/png" href=" {% static 'images/icons/favicon.ico'%}"/>
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css'%}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css'%}">
+	<!--===============================================================================================-->	
+		<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css'%}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css'%}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css '%}">
+	<!--===============================================================================================-->	
+		<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css'%}">
+	<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/util.css'%}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+	<!--===============================================================================================-->
+</head>
+
+<body>
+
+ <!-- делаем шапку сайта -->
+	<header class="header">
+	
+		<div class="logo">
+			<a  class="django-blog" href="/">Django Blog</a>
+		</div>
+
+
+		<!-- сайд бар -->
+		<div class="side-bar">
+
+			<ul>
+				<li class="nav-bar"><a href="/news/">News</a></li>
+				<li class="nav-bar"><a href="/admin/">Admin</a></li>
+				<li class="nav-bar"><a href="/portfolio/">Portfolio</a></li>
+				<li class="nav-bar"><a href="/drafts/">Drafts</a></li>
+				<li class="nav-bar"><a href="#">Contact</a></li>
+			</ul>
+
+		</div>
+
+	</header>
+
+	<!-- делаем контент сайта -->
+	<div class="content">
+		<!-- первая часть - "home" -->
+		<div class="home">
+			{% block content %}
+			{% endblock %}
+		</div>
+
+
+		</div>
+
+	</div>
+
+	<div id="dropDownSelect1"></div>
+	
+	<!--===============================================================================================-->
+		<script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+	<!--===============================================================================================-->
+		<script src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+		<script src="vendor/bootstrap/js/popper.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+		<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+		<script src="vendor/daterangepicker/moment.min.js"></script>
+		<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+		<script src="vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+		<script src="js/main.js"></script>
+
+
+</body>
+</html>

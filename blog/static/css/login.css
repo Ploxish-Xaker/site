@@ -1,0 +1,98 @@
+/*редактируем шапку*/
+.header {
+    width: 1100px;
+    height: 50px;
+    background-color: black;
+    color: #fff;
+    margin: auto;
+    top: 0%;
+    display: block;
+    position: fixed;
+    margin-left:430px;
+    margin-right:20%;
+    z-index: 1;
+    border-radius: 50px;
+}
+
+/*задаём стили логотипу*/
+.logo {
+    margin-left: 80px;
+    margin-top: 8px;
+    font-size: 20px;
+    font-family: URW Chancery L, cursive;
+    color: #F0B000;
+}
+
+.django-blog {
+    text-decoration: none;
+    color: #F0B000;
+}
+
+.django-blog:hover {
+    text-decoration: none;
+    color: #F0B000;
+}
+
+/*рисуем остальной side bar*/
+.side-bar {
+    margin-left: 13%;
+}
+
+.nav-bar {
+    font-family: "ProximaNovaCond-Extrabld", sans-serif;
+    font-size: 16px;
+    background-color: black;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-left: 120px;
+    display: inline;
+    bottom: 28px;
+
+}
+
+
+.errorlist {
+    color: green;
+}
+
+.container-login100-form-btn {
+    margin-bottom: 1px;
+}
+
+.login-more li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.login-more li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #cccccc;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+}
+
+
+.txt1 {
+  font-family: Poppins-Regular;
+  font-size: 35px;
+  color: #999999;
+  line-height: 1.5;
+}
+
+.txt2 {
+  font-family: Poppins-Regular;
+  font-size: 35px;
+  color: #57b846;
+  line-height: 1.5;
+}

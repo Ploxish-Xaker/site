@@ -131,7 +131,7 @@ a:hover {
 
 /*задаём стили логотипу*/
 .logo {
-    margin-left: 90px;
+    margin-left: 40px;
     margin-top: 8px;
     font-size: 20px;
     font-family: URW Chancery L, cursive;
@@ -150,17 +150,17 @@ a:hover {
 
 /*рисуем остальной side bar*/
 .side-bar {
-    margin-left: 15%;
+    margin-left: 13%;
 }
 
 .nav-bar {
     font-family: "ProximaNovaCond-Extrabld", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     background-color: black;
     outline: none;
     cursor: pointer;
     position: relative;
-    margin-left: 80px;
+    margin-left: 40px;
     display: inline;
     bottom: 28px;
 
@@ -171,7 +171,7 @@ a:hover {
 }
 
 .button-nav-bar{
-    left: 85%;
+  
     outline: none;
     cursor: pointer;
     display: inline;
